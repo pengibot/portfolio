@@ -3,6 +3,8 @@ import logo from './assets/logo.svg';
 import './App.css';
 import Profile from './pages/Profile';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Projects from './pages/Projects';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
     return (
@@ -13,6 +15,14 @@ function App() {
                     <Route
                         path='/'
                         element={<Profile userName='pengibot'/>}
+                    />
+                    <Route
+                        path='/projects'
+                        element={<Projects userName='pengibot'/>}
+                    />
+                    <Route
+                        path='/projects/:name'
+                        element={<ProjectDetail userName='pengibot'/>}
                     />
                 </Routes>
             </BrowserRouter>
